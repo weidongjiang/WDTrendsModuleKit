@@ -117,14 +117,14 @@
 			<key>benchmark_right_offset</key>
 			<integer>-10</integer>
 			<key>width</key>
-			<integer>20</integer>
+			<integer>60</integer>
 			<key>height</key>
 			<integer>20</integer>
 		</dict>
 		<key>data</key>
 		<dict>
 			<key>text</key>
-			<string>nihao</string>
+			<string>右上角</string>
 		</dict>
 		<key>action</key>
 		<dict>
@@ -132,6 +132,72 @@
 			<string>WDTrendsModuleActionTypeTowTap</string>
 			<key>actionScheme</key>
 			<string>wd://gohome.k</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>itemType</key>
+		<string>button</string>
+		<key>itemID</key>
+		<string>10002</string>
+		<key>itemSuperview</key>
+		<string>10000</string>
+		<key>style</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#000000</string>
+			<key>alpha</key>
+			<string>0.5</string>
+			<key>text_color</key>
+			<string>#666666</string>
+			<key>text_font</key>
+			<string>8</string>
+		</dict>
+		<key>layout</key>
+		<dict>
+			<key>benchmark_center</key>
+			<false/>
+			<key>benchmark_center_offset</key>
+			<integer>0</integer>
+			<key>benchmark_centerX</key>
+			<false/>
+			<key>benchmark_centerX_offset</key>
+			<integer>0</integer>
+			<key>benchmark_centerY</key>
+			<false/>
+			<key>benchmark_centerY_offset</key>
+			<integer>0</integer>
+			<key>benchmark_top</key>
+			<false/>
+			<key>benchmark_top_offset</key>
+			<integer>0</integer>
+			<key>benchmark_left</key>
+			<true/>
+			<key>benchmark_left_offset</key>
+			<integer>10</integer>
+			<key>benchmark_bottom</key>
+			<true/>
+			<key>benchmark_bottom_offset</key>
+			<integer>-10</integer>
+			<key>benchmark_right</key>
+			<false/>
+			<key>benchmark_right_offset</key>
+			<integer>-10</integer>
+			<key>width</key>
+			<integer>40</integer>
+			<key>height</key>
+			<integer>40</integer>
+		</dict>
+		<key>data</key>
+		<dict>
+			<key>text</key>
+			<string>右上角</string>
+		</dict>
+		<key>action</key>
+		<dict>
+			<key>actionType</key>
+			<string>WDTrendsModuleActionTypeTowTap</string>
+			<key>actionScheme</key>
+			<string>wd://gohome.ok</string>
 		</dict>
 	</dict>
 </array>
