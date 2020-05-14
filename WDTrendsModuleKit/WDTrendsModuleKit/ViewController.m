@@ -40,8 +40,6 @@ static NSString *benchmark_centerY_key = @"benchmark_centerY";
 static NSString *benchmark_centerY_offset_key = @"benchmark_centerY_offset";
 
 
-
-
 static NSString *style_key = @"style";
 static NSString *backgroundColor_key = @"backgroundColor";
 static NSString *alpha_key = @"alpha";
@@ -71,9 +69,7 @@ static NSString *WDTrendsModuleActionTypeLongTap = @"WDTrendsModuleActionTypeLon
 
 @property (nonatomic, strong) NSMutableDictionary            *itemInfoDictionary; ///< <#value#>
 @property (nonatomic, strong) NSMutableDictionary            *itemObjDictionary; ///< <#value#>
-
-@property (nonatomic, strong) NSMutableArray            *itemTempArray; ///< <#value#>
-
+@property (nonatomic, strong) NSMutableArray                 *itemTempArray; ///< <#value#>
 
 @end
 
