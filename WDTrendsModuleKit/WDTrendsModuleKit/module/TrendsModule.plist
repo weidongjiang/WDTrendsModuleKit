@@ -15,6 +15,10 @@
 			<string>#000333</string>
 			<key>alpha</key>
 			<string>0.5</string>
+			<key>text_color</key>
+			<string>#666666</string>
+			<key>text_font</key>
+			<string>12</string>
 		</dict>
 		<key>layout</key>
 		<dict>
@@ -47,9 +51,14 @@
 			<key>benchmark_right_offset</key>
 			<integer>0</integer>
 			<key>width</key>
-			<integer>100</integer>
+			<integer>150</integer>
 			<key>height</key>
-			<integer>30</integer>
+			<integer>100</integer>
+		</dict>
+		<key>data</key>
+		<dict>
+			<key>text</key>
+			<string>nihao</string>
 		</dict>
 	</dict>
 	<dict>

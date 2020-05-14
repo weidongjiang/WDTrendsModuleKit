@@ -45,7 +45,12 @@ static NSString *benchmark_centerY_offset_key = @"benchmark_centerY_offset";
 static NSString *style_key = @"style";
 static NSString *backgroundColor_key = @"backgroundColor";
 static NSString *alpha_key = @"alpha";
+static NSString *text_color_key = @"text_color";
+static NSString *text_font_key = @"text_font";
 
+
+
+static NSString *data_key = @"data";
 
 
 
@@ -83,7 +88,7 @@ static NSString *alpha_key = @"alpha";
         UIView *item = [self _alloc_init_itemType:itemType];
         // 设置样式
         NSDictionary *style = [info objectForKey:style_key];
-        item = [self _setItemStyle:style item:item];
+        item = [self _setItemStyle:style item:item itemType:itemType];
 
         // 内存ID
         NSString *iteminfoID = [NSString stringWithFormat:@"%p",item];
@@ -125,6 +130,8 @@ static NSString *alpha_key = @"alpha";
     }
 
 }
+
+
 
 - (UIView *)_steItemLayout:(NSDictionary *)layout item:(UIView *)item {
 
@@ -221,12 +228,23 @@ static NSString *alpha_key = @"alpha";
     return item;
 }
 
-- (UIView *)_setItemStyle:(NSDictionary *)style item:(UIView *)item {
+- (UIView *)_setItemStyle:(NSDictionary *)style item:(UIView *)item itemType:(NSString *)itemType {
 
     NSString *backgroundColor = [style objectForKey:backgroundColor_key];
     CGFloat alpha = [[style objectForKey:alpha_key] floatValue];
-
     [item setBackgroundColor:[UIColor wdt_colorWithHex:backgroundColor alpha:alpha]];
+
+    NSString *text_color = [style objectForKey:text_color_key];
+    CGFloat text_font = [[style objectForKey:text_font_key] floatValue];
+
+    if ([itemType isEqualToString:@"button"]) {
+        UIButton *item_ = (UIButton *)item;
+        [item_ setTintColor:[UIColor wdt_colorWithHex:text_color alpha:1]];
+        item_.titleLabel.font = [UIFont systemFontOfSize:text_font];
+        [item_ setTitle:@"kjhg" forState:UIControlStateNormal];
+    }
+
+
 
     return item;
 }
