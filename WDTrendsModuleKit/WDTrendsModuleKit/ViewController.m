@@ -53,6 +53,17 @@ static NSString *text_font_key = @"text_font";
 static NSString *data_key = @"data";
 
 
+static NSString *action_key = @"action";
+static NSString *actionType_key = @"actionType";
+static NSString *actionScheme_key = @"actionScheme";
+
+
+static NSString *WDTrendsModuleActionTypeNone = @"WDTrendsModuleActionTypeNone";
+static NSString *WDTrendsModuleActionTypeTap = @"WDTrendsModuleActionTypeTap";
+static NSString *WDTrendsModuleActionTypeTowTap = @"WDTrendsModuleActionTypeTowTap";
+static NSString *WDTrendsModuleActionTypeLongTap = @"WDTrendsModuleActionTypeLongTap";
+
+
 
 @interface ViewController ()
 
@@ -127,11 +138,77 @@ static NSString *data_key = @"data";
         NSDictionary *layout = [info objectForKey:layout_key];
         [self _steItemLayout:layout item:item];
 
+        NSDictionary *action = [info objectForKey:action_key];
+
+        [self _setAction:action item:item];
+
     }
 
 }
 
+- (void)_setAction:(NSDictionary *)action item:(UIView *)item {
 
+    NSString *actionType = [action objectForKey:actionType_key];
+    NSString *actionScheme = [action objectForKey:actionScheme_key];
+
+    if ([actionType isEqualToString:WDTrendsModuleActionTypeNone]) {
+        return;
+    }
+
+    if ([actionType isEqualToString:WDTrendsModuleActionTypeTap]) {
+        // 添加 点击图片放大图片
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(itemTapGestureAction:)];
+        [item addGestureRecognizer:tapGesture];
+    }
+
+    if ([actionType isEqualToString:WDTrendsModuleActionTypeTowTap]) {
+        //双击放大缩小手势
+        UITapGestureRecognizer *tapGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(itemTowTapGestureAction:)];
+        tapGesture2.numberOfTapsRequired = 2;
+        tapGesture2.numberOfTouchesRequired = 1;
+        [item addGestureRecognizer:tapGesture2];
+    }
+
+    if ([actionType isEqualToString:WDTrendsModuleActionTypeLongTap]) {
+        // 添加 没有放大的图片 删除功能
+       UILongPressGestureRecognizer *longPressGestureM = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(itemLongPressGestureAction:)];
+       longPressGestureM.minimumPressDuration = 1;
+       longPressGestureM.allowableMovement = 15;
+       longPressGestureM.numberOfTouchesRequired = 1;
+       [item addGestureRecognizer:longPressGestureM];
+    }
+
+}
+
+- (void)itemTapGestureAction:(UITapGestureRecognizer *)tap {
+
+    NSString *iteminfoID = [NSString stringWithFormat:@"%p",tap.view];
+    NSDictionary *info = [self.itemInfoDictionary objectForKey:iteminfoID];
+    NSDictionary *action = [info objectForKey:action_key];
+    NSString *actionScheme = [action objectForKey:actionScheme_key];
+    NSLog(@"actionScheme-1-%@",actionScheme);
+
+}
+
+- (void)itemTowTapGestureAction:(UITapGestureRecognizer *)tap {
+
+    NSString *iteminfoID = [NSString stringWithFormat:@"%p",tap.view];
+    NSDictionary *info = [self.itemInfoDictionary objectForKey:iteminfoID];
+    NSDictionary *action = [info objectForKey:action_key];
+    NSString *actionScheme = [action objectForKey:actionScheme_key];
+    NSLog(@"actionScheme-2-%@",actionScheme);
+
+}
+
+- (void)itemLongPressGestureAction:(UILongPressGestureRecognizer *)lonp {
+
+    NSString *iteminfoID = [NSString stringWithFormat:@"%p",lonp.view];
+    NSDictionary *info = [self.itemInfoDictionary objectForKey:iteminfoID];
+    NSDictionary *action = [info objectForKey:action_key];
+    NSString *actionScheme = [action objectForKey:actionScheme_key];
+    NSLog(@"actionScheme-3-%@",actionScheme);
+
+}
 
 - (UIView *)_steItemLayout:(NSDictionary *)layout item:(UIView *)item {
 
