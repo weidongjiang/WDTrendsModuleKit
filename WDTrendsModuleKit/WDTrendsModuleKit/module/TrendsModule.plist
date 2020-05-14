@@ -62,7 +62,7 @@
 		<key>style</key>
 		<dict>
 			<key>backgroundColor</key>
-			<string>#000333</string>
+			<string>#000000</string>
 			<key>alpha</key>
 			<string>0.5</string>
 		</dict>

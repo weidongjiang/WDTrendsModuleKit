@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
+#import "UIColor+WDColor.h"
 
 
 static NSString *itemType_key = @"itemType";
@@ -157,9 +158,8 @@ static NSString *alpha_key = @"alpha";
     NSString *backgroundColor = [style objectForKey:backgroundColor_key];
     CGFloat alpha = [[style objectForKey:alpha_key] floatValue];
 
+    [item setBackgroundColor:[UIColor wdt_colorWithHex:backgroundColor alpha:alpha]];
 
-    [item setBackgroundColor:[UIColor greenColor]];
-    item.alpha = alpha;
 
     return item;
 }

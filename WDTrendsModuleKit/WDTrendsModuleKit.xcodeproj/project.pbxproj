@@ -20,6 +20,7 @@
 		CEDBF3912465724500037D58 /* WDTrendsModuleKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDBF3902465724500037D58 /* WDTrendsModuleKitTests.m */; };
 		CEDBF39C2465724600037D58 /* WDTrendsModuleKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDBF39B2465724600037D58 /* WDTrendsModuleKitUITests.m */; };
 		CEFE260D246CEB440038C822 /* TrendsModule.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEFE260C246CEB440038C822 /* TrendsModule.plist */; };
+		CEFE2610246D22AB0038C822 /* UIColor+WDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE260F246D22AB0038C822 /* UIColor+WDColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		CEDBF39B2465724600037D58 /* WDTrendsModuleKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDTrendsModuleKitUITests.m; sourceTree = "<group>"; };
 		CEDBF39D2465724600037D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFE260C246CEB440038C822 /* TrendsModule.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TrendsModule.plist; sourceTree = "<group>"; };
+		CEFE260E246D22AB0038C822 /* UIColor+WDColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+WDColor.h"; sourceTree = "<group>"; };
+		CEFE260F246D22AB0038C822 /* UIColor+WDColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WDColor.m"; sourceTree = "<group>"; };
 		E11EE022643EC63084C042DA /* Pods-WDTrendsModuleKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDTrendsModuleKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDTrendsModuleKit/Pods-WDTrendsModuleKit.release.xcconfig"; sourceTree = "<group>"; };
 		E17BB84003C1FD9A4EE0914C /* libPods-WDTrendsModuleKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WDTrendsModuleKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				CEFE260C246CEB440038C822 /* TrendsModule.plist */,
+				CEFE260E246D22AB0038C822 /* UIColor+WDColor.h */,
+				CEFE260F246D22AB0038C822 /* UIColor+WDColor.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDBF37C2465724100037D58 /* ViewController.m in Sources */,
+				CEFE2610246D22AB0038C822 /* UIColor+WDColor.m in Sources */,
 				CEDBF3762465724100037D58 /* AppDelegate.m in Sources */,
 				CEDBF3872465724500037D58 /* main.m in Sources */,
 				CEDBF3792465724100037D58 /* SceneDelegate.m in Sources */,
