@@ -51,6 +51,8 @@ static NSString *text_font_key = @"text_font";
 
 
 static NSString *data_key = @"data";
+static NSString *text_key = @"text";
+
 
 
 static NSString *action_key = @"action";
@@ -135,12 +137,16 @@ static NSString *WDTrendsModuleActionTypeLongTap = @"WDTrendsModuleActionTypeLon
             [_superview addSubview:item];
         }
 
+        // 布局
         NSDictionary *layout = [info objectForKey:layout_key];
         [self _steItemLayout:layout item:item];
 
+        // 事件
         NSDictionary *action = [info objectForKey:action_key];
-
         [self _setAction:action item:item];
+
+        // 数据显示
+        [self _setDataWithItem:item];
 
     }
 
@@ -149,8 +155,6 @@ static NSString *WDTrendsModuleActionTypeLongTap = @"WDTrendsModuleActionTypeLon
 - (void)_setAction:(NSDictionary *)action item:(UIView *)item {
 
     NSString *actionType = [action objectForKey:actionType_key];
-    NSString *actionScheme = [action objectForKey:actionScheme_key];
-
     if ([actionType isEqualToString:WDTrendsModuleActionTypeNone]) {
         return;
     }
@@ -313,17 +317,28 @@ static NSString *WDTrendsModuleActionTypeLongTap = @"WDTrendsModuleActionTypeLon
 
     NSString *text_color = [style objectForKey:text_color_key];
     CGFloat text_font = [[style objectForKey:text_font_key] floatValue];
-
     if ([itemType isEqualToString:@"button"]) {
         UIButton *item_ = (UIButton *)item;
         [item_ setTintColor:[UIColor wdt_colorWithHex:text_color alpha:1]];
         item_.titleLabel.font = [UIFont systemFontOfSize:text_font];
-        [item_ setTitle:@"kjhg" forState:UIControlStateNormal];
     }
 
-
-
     return item;
+}
+
+- (void)_setDataWithItem:(UIView *)item {
+    NSString *iteminfoID = [NSString stringWithFormat:@"%p",item];
+    NSDictionary *info = [self.itemInfoDictionary objectForKey:iteminfoID];
+    NSString *itemType = [info objectForKey:itemType_key];
+
+    NSDictionary *data = [info objectForKey:data_key];
+    NSString *text = [data objectForKey:text_key];
+
+    if ([itemType isEqualToString:@"button"]) {
+           UIButton *item_ = (UIButton *)item;
+           [item_ setTitle:text forState:UIControlStateNormal];
+   }
+
 }
 
 - (UIView *)_alloc_init_itemType:(NSString *)itemType {
