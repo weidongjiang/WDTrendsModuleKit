@@ -37,23 +37,23 @@
 			<key>benchmark_top</key>
 			<true/>
 			<key>benchmark_top_offset</key>
-			<integer>100</integer>
+			<integer>0</integer>
 			<key>benchmark_left</key>
 			<true/>
 			<key>benchmark_left_offset</key>
-			<integer>100</integer>
+			<integer>0</integer>
 			<key>benchmark_bottom</key>
-			<false/>
+			<true/>
 			<key>benchmark_bottom_offset</key>
 			<integer>0</integer>
 			<key>benchmark_right</key>
-			<false/>
+			<true/>
 			<key>benchmark_right_offset</key>
 			<integer>0</integer>
 			<key>width</key>
-			<integer>150</integer>
+			<integer>0</integer>
 			<key>height</key>
-			<integer>100</integer>
+			<integer>0</integer>
 		</dict>
 		<key>data</key>
 		<dict>

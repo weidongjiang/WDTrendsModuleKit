@@ -10,6 +10,7 @@
 		22988B95849E56086EE37163 /* libPods-WDTrendsModuleKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E17BB84003C1FD9A4EE0914C /* libPods-WDTrendsModuleKitTests.a */; };
 		4DEB1C7D38F28F1502AC01B2 /* libPods-WDTrendsModuleKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078DF82B2D10F829D30E9C33 /* libPods-WDTrendsModuleKitUITests.a */; };
 		73AC9EE69CD0D9BEC3E13DAE /* libPods-WDTrendsModuleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E956AC7FF6C0ECA9593D484 /* libPods-WDTrendsModuleKit.a */; };
+		CE6646B4246E2CA70088C1B9 /* WDTrendsModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6646B3246E2CA70088C1B9 /* WDTrendsModuleView.m */; };
 		CEDBF3762465724100037D58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDBF3752465724100037D58 /* AppDelegate.m */; };
 		CEDBF3792465724100037D58 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDBF3782465724100037D58 /* SceneDelegate.m */; };
 		CEDBF37C2465724100037D58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDBF37B2465724100037D58 /* ViewController.m */; };
@@ -48,6 +49,9 @@
 		7AE45524211C88A8497DE27F /* Pods-WDTrendsModuleKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDTrendsModuleKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDTrendsModuleKitUITests/Pods-WDTrendsModuleKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E956AC7FF6C0ECA9593D484 /* libPods-WDTrendsModuleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WDTrendsModuleKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EE2513D321F2220EE10DFE /* Pods-WDTrendsModuleKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDTrendsModuleKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDTrendsModuleKitTests/Pods-WDTrendsModuleKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6646B2246E2CA70088C1B9 /* WDTrendsModuleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDTrendsModuleView.h; sourceTree = "<group>"; };
+		CE6646B3246E2CA70088C1B9 /* WDTrendsModuleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDTrendsModuleView.m; sourceTree = "<group>"; };
+		CE6646B5246E2D120088C1B9 /* WDTrendsModuleConfign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDTrendsModuleConfign.h; sourceTree = "<group>"; };
 		CEDBF3712465724100037D58 /* WDTrendsModuleKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDTrendsModuleKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDBF3742465724100037D58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEDBF3752465724100037D58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -189,6 +193,9 @@
 				CEFE260C246CEB440038C822 /* TrendsModule.plist */,
 				CEFE260E246D22AB0038C822 /* UIColor+WDColor.h */,
 				CEFE260F246D22AB0038C822 /* UIColor+WDColor.m */,
+				CE6646B2246E2CA70088C1B9 /* WDTrendsModuleView.h */,
+				CE6646B3246E2CA70088C1B9 /* WDTrendsModuleView.m */,
+				CE6646B5246E2D120088C1B9 /* WDTrendsModuleConfign.h */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -399,6 +406,7 @@
 				CEDBF37C2465724100037D58 /* ViewController.m in Sources */,
 				CEFE2610246D22AB0038C822 /* UIColor+WDColor.m in Sources */,
 				CEDBF3762465724100037D58 /* AppDelegate.m in Sources */,
+				CE6646B4246E2CA70088C1B9 /* WDTrendsModuleView.m in Sources */,
 				CEDBF3872465724500037D58 /* main.m in Sources */,
 				CEDBF3792465724100037D58 /* SceneDelegate.m in Sources */,
 			);
