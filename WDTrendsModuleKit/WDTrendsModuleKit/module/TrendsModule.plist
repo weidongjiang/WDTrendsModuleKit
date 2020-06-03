@@ -12,13 +12,21 @@
 		<key>style</key>
 		<dict>
 			<key>backgroundColor</key>
-			<string>#000333</string>
+			<string>#000000</string>
 			<key>alpha</key>
-			<string>0.5</string>
+			<string>0.1</string>
 			<key>text_color</key>
 			<string>#666666</string>
 			<key>text_font</key>
 			<string>12</string>
+			<key>isSetLayer</key>
+			<true/>
+			<key>borderColor</key>
+			<string>#666666</string>
+			<key>borderWidth</key>
+			<string>2</string>
+			<key>cornerRadius</key>
+			<string>5</string>
 		</dict>
 		<key>layout</key>
 		<dict>

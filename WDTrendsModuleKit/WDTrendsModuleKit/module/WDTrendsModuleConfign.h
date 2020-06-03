@@ -44,6 +44,13 @@ static NSString *alpha_key = @"alpha";
 static NSString *text_color_key = @"text_color";
 static NSString *text_font_key = @"text_font";
 
+static NSString *isSetLayer_key = @"isSetLayer";
+static NSString *borderColor_key = @"borderColor";
+static NSString *borderWidth_key = @"borderWidth";
+static NSString *cornerRadius_key = @"cornerRadius";
+
+
+
 
 
 static NSString *data_key = @"data";

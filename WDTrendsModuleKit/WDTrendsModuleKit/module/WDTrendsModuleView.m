@@ -260,11 +260,39 @@
     NSString *text_color = [style objectForKey:text_color_key];
     CGFloat text_font = [[style objectForKey:text_font_key] floatValue];
     if ([itemType isEqualToString:@"button"]) {
-        UIButton *item_ = (UIButton *)item;
-        [item_ setTintColor:[UIColor wdt_colorWithHex:text_color alpha:1]];
-        item_.titleLabel.font = [UIFont systemFontOfSize:text_font];
+        UIButton *_item = (UIButton *)item;
+        [_item setTintColor:[UIColor wdt_colorWithHex:text_color alpha:1]];
+        _item.titleLabel.font = [UIFont systemFontOfSize:text_font];
+    }
+    
+    if ([itemType isEqualToString:@"label"]) {
+        UILabel *_item = (UILabel *)item;
+        _item.textColor = [UIColor wdt_colorWithHex:text_color alpha:1];
+        _item.font = [UIFont systemFontOfSize:text_font];
+    }
+    
+    if ([itemType isEqualToString:@"imageview"]) {
+        UIImageView *_item = (UIImageView *)item;
     }
 
+    
+    BOOL isSetLayer = [[style objectForKey:isSetLayer_key] boolValue];
+    NSString *borderColor = [style objectForKey:borderColor_key];
+    CGFloat borderWidth = [[style objectForKey:borderWidth_key] floatValue];
+    CGFloat cornerRadius = [[style objectForKey:cornerRadius_key] floatValue];
+    if (isSetLayer) {
+        item.layer.masksToBounds = YES;
+        if (borderColor.length > 0) {
+            item.layer.borderColor = [UIColor wdt_colorWithHex:borderColor].CGColor;
+        }
+        if (borderWidth > 0) {
+            item.layer.borderWidth = borderWidth;
+        }
+        if (cornerRadius > 0) {
+            item.layer.cornerRadius = cornerRadius;
+        }
+    }
+    
     return item;
 }
 
