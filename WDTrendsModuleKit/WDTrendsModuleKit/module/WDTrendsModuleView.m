@@ -275,11 +275,27 @@
 
     NSDictionary *data = [info objectForKey:data_key];
     NSString *text = [data objectForKey:text_key];
+    NSString *imageNamed = [data objectForKey:imageNamed_key];
+    NSString *imageUrl = [data objectForKey:imageUrl_key];
+
 
     if ([itemType isEqualToString:@"button"]) {
-           UIButton *item_ = (UIButton *)item;
-           [item_ setTitle:text forState:UIControlStateNormal];
-   }
+       UIButton *_item = (UIButton *)item;
+       [_item setTitle:text forState:UIControlStateNormal];
+    }
+    if ([itemType isEqualToString:@"label"]) {
+        UILabel *_item = (UILabel *)item;
+        _item.text = text;
+    }
+    if ([itemType isEqualToString:@"imageview"]) {
+        UIImageView *_item = (UIImageView *)item;
+        if (imageNamed.length > 0) {
+            _item.image = [UIImage imageNamed:imageNamed];
+        }else if (imageUrl.length > 0) {
+            
+        }
+    }
+    
 }
 
 - (UIView *)_alloc_init_itemType:(NSString *)itemType {

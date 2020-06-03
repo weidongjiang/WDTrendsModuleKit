@@ -48,6 +48,8 @@ static NSString *text_font_key = @"text_font";
 
 static NSString *data_key = @"data";
 static NSString *text_key = @"text";
+static NSString *imageNamed_key = @"imageNamed";
+static NSString *imageUrl_key = @"imageUrl";
 
 
 
